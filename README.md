@@ -14,3 +14,7 @@ Some samples:
 `python3 main.py -p rigado -t 0.7 -m video`
 
 `python3 main.py -p ledboard_hole -t 0.66 -m image`
+
+## Todo 🗒
+
+- Make useful data out of actual landmark positions versus expected positions

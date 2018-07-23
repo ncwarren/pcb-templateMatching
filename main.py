@@ -1,9 +1,6 @@
 import cv2
 import numpy as np
 from argparse import ArgumentParser
-import os
-
-# https://pythonprogramming.net/template-matching-python-opencv-tutorial/
 
 def imageMode(args, threshold):
     # Get templates for landmarks
@@ -79,13 +76,6 @@ def videoMode(args, threshold):
 
     # Open PCB video
     cap = cv2.VideoCapture('./pcb/'+args.pcb+'.m4v')
-
-    try:
-        if not os.path.exists('data'):
-            os.makedirs('data')
-    except OSError:
-        print ('Error: Creating directory of data')
-    currentFrame = 0
 
     while(True):
         ret, frame = cap.read()
